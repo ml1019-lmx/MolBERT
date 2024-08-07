@@ -1049,6 +1049,7 @@ class SmilesIndexFeaturizer(MolFeaturizer):
             '.',
             '[',
             ']',
+            '>', #for Diels-Alde, to split the reactant and the product
         )
 
         self.idx_to_token = [*self.symbols, *self.allowed_elements_chars, *self.smiles_special_chars]
